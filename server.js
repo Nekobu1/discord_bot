@@ -69,10 +69,8 @@ client.on("message", msg =>{
             msg.reply ("bruh")
           }
 });//==================================================
-client.user.setActivity(`pe!commands and helping ${client.guilds.size} servers`, { type: 'PLAYING', status: 'online'});
-  console.log(`The bot ${client.user.tag} successfully logged in.`);
-  console.log(`The prefix is ${config.prefix}`);
-  console.log(`In ${client.guilds.size} servers.`);
-  client.guilds.forEach((guild) => {
-  })
+client.on("ready", async () => {
+  console.log(`Bot is Ready!`);
+  client.user.setActivity(`pe!commands`)
+})
 
