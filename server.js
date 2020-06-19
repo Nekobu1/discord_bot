@@ -1,10 +1,23 @@
+
 const Discord = require("discord.js");
 
 const client = new Discord.Client();
 
-client.on("Hello World!", () =>{
-    console.log(`Logged in as ${client.user.tag}!`);
+client.on("ready", async () => {
+  console.log(`Bot is Ready!`);
+  client.user.setActivity(`with penguins | pe!commands`)
+})
+client.on('message', message => {
+  // If the message is '!rip'
+  if (message.content === 'pe!penguin') {
+    message.channel.send ("Who Doesn't love penguins?")
+    // Create the attachment using MessageAttachment
+    const attachment = new Discord.MessageAttachment ('download.jpeg', 'download (1).jpeg', 'download (2).jpeg', 'yespengu.jpeg');
+    // Send the attachment in the message channel
+    message.channel.send(attachment);
+  }
 });
+
 
 
 client.on("message", msg =>{
@@ -18,32 +31,26 @@ client.on("message", msg =>{
   }
         
     if (msg.content === "no you don't"){
-        msg.reply ("yes he does")
+      msg.channel.send ("yes he does")
     }
     if (msg.content === "penguins suck"){
         msg.reply ("well they suck less than you do")
     }
     if (msg.content === ("I hate you")){
-        msg.reply ("*eats popcorn*")
+      msg.channel.send ("*eats popcorn*")
     }
     if (msg.content === ("hey")){
-        msg.reply ("wassup")
+      msg.channel.send ("wassup")
     }
      if (msg.content === ("lmfao")){
-      msg.reply (":rofl:")
+      msg.channel.send (":rofl:")
     }
-      if (msg.content === ("no u")){
-        msg.reply ("no u")
-      }
+      
       if (msg.content === ("corona")){
-        msg.reply ("good thing penguins can't get it!")
-      }
-      if (msg.content === ("pe!penguin")){
-        msg.reply ("Who doesn't like penguins?")
-        console.error("Oops Didn't work sryyy bro");
+        msg.channel.send ("good thing penguins can't get it!")
       }
       client.on('message', async message => {
-        if (message.content === 'pe!poll') {
+        if (message.content ==='pe!poll') {
             try {
                 await message.react('👍');
                 await message.react('👎');
@@ -65,12 +72,8 @@ client.on("message", msg =>{
       if (msg.content === ("pe!commands")){
         msg.reply ("Message Commands: pe!pos (gives positivity), pe!penguin (sends a penguin pic ps not working), pe!poll (creates a poll), pe!doismell (do you smell?) "
         )}
-        if (msg.content === ("bruh")){
-            msg.reply ("bruh")
-          }
 });//==================================================
-client.on("ready", async () => {
-  console.log(`Bot is Ready!`);
-  client.user.setActivity(`pe!commands`)
-})
 
+
+
+client.login("NjU2NTA1MjU2NTE1MjA3MjE4.XuEGwg.Gu0cjoRIxb5DOfhRtUOz9C0RdcQ");
