@@ -45,6 +45,11 @@ client.on("message", msg =>{
      if (msg.content === ("lmfao")){
       msg.channel.send (":rofl:")
     }
+  if (msg.content === ("I have a joke")){
+      setTimeout(function(){ 
+        msg.channel.send("LMFAOOOO"); 
+    }, 15000);
+    }
       
       if (msg.content === ("corona")){
         msg.channel.send ("good thing penguins can't get it!")
