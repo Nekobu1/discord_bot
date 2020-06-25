@@ -28,9 +28,9 @@ client.on("message", msg =>{
   msg.reply(poss[pos]);
   
   }
-  if (msg.content === ("pe!github")){
-      msg.channel.send ("Here is my Owner's code, enjoy! \ https://github.com/penguin-hacks/discord_bot/tree/master ")
-    }
+//   if (msg.content === ("pe!github")){
+//       msg.channel.send ("Here is my Owner's code, enjoy! \ https://github.com/penguin-hacks/discord_bot/tree/master ")
+//     }
         
     if (msg.content === "no you don't"){
       msg.channel.send ("yes he does")
@@ -83,7 +83,7 @@ client.on("message", msg =>{
           pe!poll (creates a poll),\
           pe!doismell (do you smell?)\
           Beta: \
-         pe!translate penguin {text} (working on it)\
+         pe!translate penguin {text} (working on it) \
          pe!github (shows bot's code)"          
         )}
 });//==================================================
