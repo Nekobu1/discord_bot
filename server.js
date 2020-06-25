@@ -2,11 +2,12 @@
 const Discord = require("discord.js");
 
 const client = new Discord.Client();
-
+// Status:
 client.on("ready", async () => {
   console.log(`Bot is Ready!`);
   client.user.setActivity(`with penguins | pe!commands`)
 })
+//Random Image (Idk how to do this haaaaaalp)
 client.on('attachment', message => {
   if (message.content === 'pe!penguin') {
     message.channel.send ("Who Doesn't love penguins?")
@@ -17,7 +18,7 @@ client.on('attachment', message => {
 });
 
 
-
+//Commands and Ars
 client.on("message", msg =>{
 
     if (msg.content === 'pe!pos'){
@@ -78,5 +79,5 @@ client.on("message", msg =>{
 });//==================================================
 
 
-
+//My supa secret token u don't see
 client.login(process.env.token);
