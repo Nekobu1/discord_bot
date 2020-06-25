@@ -7,14 +7,12 @@ client.on("ready", async () => {
   console.log(`Bot is Ready!`);
   client.user.setActivity(`with penguins | pe!commands`)
 })
-client.on('message', message => {
-  // If the message is '!rip'
+client.on('attachment', message => {
   if (message.content === 'pe!penguin') {
     message.channel.send ("Who Doesn't love penguins?")
-    // Create the attachment using MessageAttachment
-    const attachment = new Discord.MessageAttachment ('download.jpeg', 'download (1).jpeg', 'download (2).jpeg', 'yespengu.jpeg');
-    // Send the attachment in the message channel
-    message.channel.send(attachment);
+    var images = [new Discord.MessageAttachment ('download.jpeg', 'download (1).jpeg', 'download (2).jpeg', 'yespengu.jpeg')];
+    var image = Math.floor(Math.random() * images.length);
+    message.channel.send(images[image]);
   }
 });
 
