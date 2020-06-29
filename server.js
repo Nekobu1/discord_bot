@@ -52,6 +52,11 @@ client.on("message", msg =>{
         msg.channel.send("LMFAOOOO"); 
     }, 2000);
     }
+  if (msg.content === ("pe!joke")){
+       var jokes = ["I've invented a new word! It's called Plagiarism", "Helvetica and Times New Roman walk into a bar, Get out of here! shouts the bartender: We don't serve your type", "Hear about the new restaurant called Karma? There’s no menu: You get what you deserve.", "What do you call a parade of rabbits hopping backwards? A receding hare-line.", "What do you call a fake noodle? An Impasta!", "What do you call sad coffee? Depresso", "What did the grandma cat say to her grandson when she saw him slouching?: You need to pay more attention to my pawsture.", "My three favorite things are eating my family and not using commas.", "A patient came to the hospital with a burned right hand. As the doctor took down his medical history, he asked the injured man, \"Do you smoke?\" \"Yeah, a pack and a half a day,\" said the patient. Concerned, the doctor told him, \"You should consider quitting.\" \"No, it's OK,\" said the patient. \"I smoke with my left hand.", "A Canadian psychologist is selling a video that teaches you how to test your dog's IQ. Here’s how it works: If you spend $12.99 for the video, your dog is smarter than you.", "My sister didn’t do as well on her driver’s-ed test as she’d hoped. It might have had something to do with how she completed this sentence: \“When the ______ is dead, the car won’t start.\” She wrote: \“Driver.\” "];
+      var joke = Math.floor(Math.random() * jokes.length);
+     msg.channel.send(jokes[joke]);
+    }
       
       if (msg.content === ("corona")){
         msg.channel.send ("good thing penguins can't get it!")
@@ -77,14 +82,7 @@ client.on("message", msg =>{
  }
       
       if (msg.content === ("pe!commands")){
-        msg.reply ("Message Commands:\
-         pe!pos (gives positivity),\
-          pe!penguin (sends a penguin pic),\
-          pe!poll (creates a poll),\
-          pe!doismell (do you smell?)\
-          Beta: \
-         pe!translate penguin {text} (working on it) \
-         pe!github (shows bot's code)"          
+        msg.reply ("Message Commands: pe!pos (gives positivity), pe!penguin (sends a penguin pic), pe!poll (creates a poll), pe!doismell (do you smell?), pe!joke (tells a joke!) Beta:  pe!translate penguin {text} (working on it)"
         )}
 });//==================================================
 
