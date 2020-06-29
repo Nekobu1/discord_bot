@@ -28,9 +28,9 @@ client.on("message", msg =>{
   msg.reply(poss[pos]);
   
   }
-//   if (msg.content === ("pe!github")){
-//       msg.channel.send ("Here is my Owner's code, enjoy! \ https://github.com/penguin-hacks/discord_bot/tree/master ")
-//     }
+  if (msg.content === ("pe!github")){
+     msg.channel.send ("Here is my Owner's code, enjoy! https://github.com/penguin-hacks/discord_bot/tree/master ")
+    }
         
     if (msg.content === "no you don't"){
       msg.channel.send ("yes he does")
@@ -53,7 +53,7 @@ client.on("message", msg =>{
     }, 2000);
     }
   if (msg.content === ("pe!joke")){
-       var jokes = ["I've invented a new word! It's called Plagiarism", "Helvetica and Times New Roman walk into a bar, Get out of here! shouts the bartender, We don't serve your type", "Hear about the new restaurant called Karma? There’s no menu, You get what you deserve.", "What do you call a parade of rabbits hopping backwards? A receding hare-line.", "What do you call a fake noodle? An Impasta!", "What do you call sad coffee? Depresso", "What did the grandma cat say to her grandson when she saw him slouching? You need to pay more attention to my pawsture.", "My three favorite things are eating my family and not using commas.", "A patient came to the hospital with a burned right hand. As the doctor took down his medical history, he asked the injured man, \"Do you smoke?\" \"Yeah, a pack and a half a day,\" said the patient. Concerned, the doctor told him, \"You should consider quitting.\" \"No, it's OK,\" said the patient. \"I smoke with my left hand.", "A Canadian psychologist is selling a video that teaches you how to test your dog's IQ. Here’s how it works: If you spend $12.99 for the video, your dog is smarter than you.", "My sister didn’t do as well on her driver’s-ed test as she’d hoped. It might have had something to do with how she completed this sentence: \“When the ______ is dead, the car won’t start.\” She wrote: \“Driver.\” "];
+       var jokes = ["I've invented a new word! It's called Plagiarism", "Helvetica and Times New Roman walk into a bar, Get out of here! shouts the bartender, We don't serve your type", "Hear about the new restaurant called Karma? There’s no menu, You get what you deserve.", "What do you call a parade of rabbits hopping backwards? A receding hare-line.", "What do you call a fake noodle? An Impasta!", "What do you call sad coffee? Depresso", "What did the grandma cat say to her grandson when she saw him slouching? You need to pay more attention to my pawsture.", "My three favorite things are eating my family and not using commas.", "A patient came to the hospital with a burned right hand. As the doctor took down his medical history, he asked the injured man, Do you smoke? Yeah, a pack and a half a day, said the patient. Concerned, the doctor told him, You should consider quitting. No, it's OK, said the patient. I smoke with my left hand.", "A Canadian psychologist is selling a video that teaches you how to test your dog's IQ. Here’s how it works: If you spend $12.99 for the video, your dog is smarter than you.", "My sister didn’t do as well on her driver’s-ed test as she’d hoped. It might have had something to do with how she completed this sentence: When the ______ is dead, the car won’t start. She wrote: Driver "];
       var joke = Math.floor(Math.random() * jokes.length);
      msg.channel.send(jokes[joke]);
     }
