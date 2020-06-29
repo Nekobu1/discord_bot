@@ -2,6 +2,127 @@
 const Discord = require("discord.js");
 
 const client = new Discord.Client();
+
+const Discord = require("discord.js");
+module.exports.run = async (client, message, args) => {
+  const user = message.mentions.users.first() || message.author;
+        message.channel.send(
+          new Discord.MessageEmbed()
+            .setColor(0x333333)
+            .setAuthor(`${user.username}'s avatar`)
+            .setImage(
+              user.avatarURL({ format: "png", size: 1024, dynamic: true })
+            )
+        );
+  
+};
+module.exports.help = {
+  name: "pe!avatar",
+  aliases: ["pe!av"]
+};
+const discord = require('discord.js');
+
+module.exports.run = async (bot, message, args) => {
+  if (!message.member.hasPermission('BAN_MEMBERS')) {
+    return message.channel.send(
+      `**${message.author.username}**, You do not have perms to ban someone.`
+    );
+  }
+
+  if (!message.guild.me.hasPermission('BAN_MEMBERS')) {
+    return message.channel.send(
+      `**${message.author.username}**, I do not have the perms to ban.`
+    );
+  }
+
+  const target = message.mentions.members.first();
+
+  if (!target) {
+    return message.channel.send(
+      `**${message.author.username}**, Please mention the person you want to ban!`
+    );
+  }
+
+  if (target.id === message.author.id) {
+    return message.channel.send(
+      `**${message.author.username}**, You can not ban yourself!`
+    );
+  }
+
+  if (!args[1]) {
+    return message.channel.send(
+      `**${message.author.username}**, Please give a reason to ban the member.`
+    );
+  }
+
+  let embed = new discord.MessageEmbed()
+    .setTitle('Action : Ban')
+    .setDescription(`${target} (${target.id}) has been banned!`)
+    .setThumbnail(target.avatarURL)
+    .setFooter(`Banned by ${message.author.tag}!`);
+
+  message.channel.send(embed);
+  target.ban(args[1]);
+};
+
+exports.help = {
+  name: 'ban',
+  aliases: [],
+  category: 'moderation',
+  description: 'Ban Command',
+  usage: 'ban <@user> <reason>',
+  run: async (bot, message, args) => {}
+};
+module.exports.help = {
+  name: "pe!ban",
+  aliases: []
+}
+const discord = require("discord.js");
+ 
+module.exports.run = async (bot, message, args) => {
+ 
+   
+    if(!message.member.hasPermission("KICK_MEMBERS")) {
+      return message.channel.send(`**${message.author.username}**, You do not have perms to kick someone.`)
+    }
+   
+    if(!message.guild.me.hasPermission("KICK_MEMBERS")) {
+      return message.channel.send(`**${message.author.username}**, I do not have the perms to kick.`)
+    }
+   
+    let target = message.mentions.members.first();
+   
+    if(!target) {
+      return message.channel.send(`**${message.author.username}**, Please mention the person you want to kick!`)
+    }
+   
+    if(target.id === message.author.id) {
+     return message.channel.send(`**${message.author.username}**, You can not kick yourself!`)
+    }
+   
+  if(!args[1]) {
+    return message.channel.send(`**${message.author.username}**, Please give a reason to kick the member.`)
+  }
+   
+    let embed = new discord.MessageEmbed()
+    .setTitle("Action: Kick")
+    .setDescription(`${target} (${target.id}) has been kicked!`)
+    .setColor("#C76666")
+    .setFooter(`Kicked by ${message.author.username}!`);
+   
+    message.channel.send(embed)
+   
+    target.kick(args[1]);
+   
+   
+   
+  }
+  module.exports.help = {
+    name: "pe!kick",
+    aliases: ["pe!k"]
+   }
+
+
 // Status:
 client.on("ready", async () => {
   console.log(`Bot is Ready!`);
