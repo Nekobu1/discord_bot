@@ -2,7 +2,7 @@
 const Discord = require("discord.js");
 
 const client = new Discord.Client();
-
+//Utility
 const Discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
   const user = message.mentions.users.first() || message.author;
@@ -121,7 +121,7 @@ module.exports.run = async (bot, message, args) => {
     name: "pe!kick",
     aliases: ["pe!k"]
    }
-
+//Utility Ends
 
 // Status:
 client.on("ready", async () => {
@@ -137,7 +137,7 @@ client.on('attachment', message => {
     message.channel.send(images[image]);
   }
 });
-
+//Status ends
 
 //Commands and Ars
 client.on("message", msg =>{
@@ -203,7 +203,7 @@ client.on("message", msg =>{
  }
       
       if (msg.content === ("pe!commands")){
-        msg.reply ("Message Commands: pe!pos (gives positivity), pe!penguin (sends a penguin pic), pe!poll (creates a poll), pe!doismell (do you smell?), pe!joke (tells a joke!) Beta:  pe!translate penguin {text} (working on it)"
+        msg.reply ("Message Commands: pe!pos (gives positivity), pe!penguin (sends a penguin pic), pe!poll (creates a poll), pe!doismell (do you smell?), pe!joke (tells a joke!) Utility: pe!kick (kicks a user) pe!ban (bans a user) pe!avatar (shows you your avatar)  Beta:  pe!translate penguin {text} (working on it)"
         )}
 });//==================================================
 
