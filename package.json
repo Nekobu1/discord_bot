@@ -1,8 +1,8 @@
 {
-  "name": "penguin-bot",
+  "name": "discord-bot",
   "version": "1.0.0",
-  "description": "A Penguin Bot",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "node .": "node run index.js"
@@ -13,19 +13,14 @@
     "@discordjs/opus": "^0.3.2",
     "alexflipnote.js": "^1.1.2",
     "anime-scraper": "^3.1.1",
-    "canvas": "^2.6.1",
-    "canvas-constructor": "^3.2.0",
     "directory": "^0.1.0",
     "discord-ytdl-core": "^4.0.2",
     "discord.js": "^12.2.0",
     "discord.js-commando": "^0.10.0",
     "file": "^0.2.2",
-    "fortnite": "^4.3.2",
     "fs": "0.0.1-security",
-    "fs-nextra": "^0.5.1",
-    "mathjs": "^7.0.2",
+    "mathjs": "^7.0.0",
     "mongoose": "^5.9.16",
-    "node-superfetch": "^0.1.10",
     "parse-ms": "^2.1.0",
     "random-puppy": "^1.1.0",
     "request": "^2.88.2",
@@ -39,3 +34,4 @@
     "ytdl-core-discord": "^1.2.0"
   }
 }
+
